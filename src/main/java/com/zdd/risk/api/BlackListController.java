@@ -152,7 +152,7 @@ public class BlackListController {
     public void white(String userId){
 
         log.info("洗白接口传入的参数是"+userId);
-       blacklistInfoDAO.selectByUserId(userId);
+       blacklistInfoDAO.white(userId);
     }
 
 
