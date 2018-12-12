@@ -27,6 +27,8 @@ public class BlackListController {
     @Autowired
     private BlacklistInfoDAO blacklistInfoDAO;
 
+    private String aaa;
+
 
 
 
