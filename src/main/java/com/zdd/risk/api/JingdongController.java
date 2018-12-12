@@ -107,6 +107,7 @@ public class JingdongController {
         CertificationUserInfo record = result.toJavaObject(CertificationUserInfo.class);
         log.info(JSONObject.toJSONString(record));
 
+
         certificationUserInfoDAO.insert(record);
 
         return new JSONObject(reMap);

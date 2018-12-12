@@ -3,6 +3,7 @@ package com.zdd.risk.dao;
 import com.zdd.risk.bean.Certification;
 import com.zdd.risk.bean.CertificationExample;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
@@ -110,4 +111,13 @@ public interface ICertificationDAO {
      * @mbg.generated Tue Nov 06 15:00:47 CST 2018
      */
     int updateByPrimaryKey(Certification record);
+
+    @Select(value = "select * from risk_certification where idCard=#{idcardNo} and certificationType=5 ORDER BY creatTime DESC LIMIT 1")
+    Certification findByIdcardNo5(@Param(value = "idcardNo") String idcardNo);
+
+    @Select(value = "select * from risk_certification where idCard=#{idcardNo} and certificationType=2 ORDER BY creatTime DESC LIMIT 1")
+    Certification findByIdcardNo2(@Param(value = "idcardNo") String idcardNo);
+
+    @Select(value = "select * from risk_certification where idCard=#{idcardNo} and certificationType=9 ORDER BY creatTime DESC LIMIT 1")
+    Certification findByIdcardNo9(@Param(value = "idcardNo") String idcardNo);
 }
