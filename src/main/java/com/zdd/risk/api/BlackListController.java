@@ -26,14 +26,6 @@ public class BlackListController {
     private static final Logger log = LoggerFactory.getLogger(BlackListController.class);
     @Autowired
     private BlacklistInfoDAO blacklistInfoDAO;
-
-    private String aaa;
-    //aa
-
-
-
-
-
     //查询返回的重复的数量
 
     /**
