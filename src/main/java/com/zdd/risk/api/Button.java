@@ -28,7 +28,6 @@ public class Button {
     public Map<String,String> selectByPid(String i){
         log.info("控制开关传入的参数是"+i);
 
-
     int i1 = Integer.parseInt(i);
 
     DictExample h=new DictExample();
